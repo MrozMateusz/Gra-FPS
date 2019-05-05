@@ -14,6 +14,7 @@ public class MenedzerMenu : MonoBehaviour
     public GameObject WDG;
     public GameObject menuInGame;
     public GameObject helpMenu;
+    public GameObject helpERROR;
     public Canvas helpMenuCanvas;
     public GameObject zapis_opcji;
     public GameObject wybor_klasy;
@@ -66,8 +67,16 @@ public class MenedzerMenu : MonoBehaviour
 
     public void NowaGra()
     {
-        WDG.SetActive(true);
-        menuInGame.SetActive(false);
+        if (PlayerPrefs.HasKey("Skok"))
+        {
+            WDG.SetActive(true);
+            menuInGame.SetActive(false);
+        }
+        else
+        {
+            helpERROR.SetActive(true);
+            menuInGame.SetActive(false);
+        }
     }
 
     public void wpisz()
@@ -322,6 +331,12 @@ public class MenedzerMenu : MonoBehaviour
         gra_od_nowa = true;
     }
  
+    public void OK()
+    {
+        helpERROR.SetActive(false);
+        menuInGame.SetActive(true);
+    }
+
     public void Zapisz()
     {
         PlayerPrefs.SetInt("rozdzielczoscSzer", Screen.width);

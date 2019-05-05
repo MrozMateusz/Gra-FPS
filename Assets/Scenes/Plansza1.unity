@@ -558,6 +558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f0a52d8e7afa647ae5f3bb3a4d85f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tr: {fileID: 542972260}
 --- !u!114 &542972264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1472,6 +1473,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f77591b71b7a59848a2b2edfd3929e80, type: 3}
+--- !u!4 &1752011069 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1265831649947931604, guid: 4e440e9f294aba8429853125c1292568,
+    type: 3}
+  m_PrefabInstance: {fileID: 1265831649629594881}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1854662270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1999,6 +2006,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: tr
+      value: 
+      objectReference: {fileID: 1752011069}
     - target: {fileID: 1265831649950621484, guid: 4e440e9f294aba8429853125c1292568,
         type: 3}
       propertyPath: m_Text
@@ -2129,6 +2140,36 @@ PrefabInstance:
       propertyPath: Down
       value: 
       objectReference: {fileID: 1558110229}
+    - target: {fileID: 7640655424268283596, guid: 4e440e9f294aba8429853125c1292568,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265831649490415896, guid: 4e440e9f294aba8429853125c1292568,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 76.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265831649945909133, guid: 4e440e9f294aba8429853125c1292568,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265831649945909133, guid: 4e440e9f294aba8429853125c1292568,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Zapisz
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265831650387489575, guid: 4e440e9f294aba8429853125c1292568,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265831650387489575, guid: 4e440e9f294aba8429853125c1292568,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Wczytaj
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e440e9f294aba8429853125c1292568, type: 3}
 --- !u!1001 &8820695599121739654

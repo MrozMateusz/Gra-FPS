@@ -7,9 +7,11 @@ public class Save : MonoBehaviour
 {
     KeyCode Zap, Wczyt;
     int scena;
+    public Transform tr;
 
     private void Start()
     {
+        tr = GetComponent<Transform>();
         if (PlayerPrefs.HasKey("Zapis"))
             Zap = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("Zapis"));
         if (PlayerPrefs.HasKey("Wczytaj"))
@@ -33,7 +35,7 @@ public class Save : MonoBehaviour
 
    public void Wczytaj()
     {
-        gameObject.transform.position = new Vector3(PlayerPrefs.GetFloat("PolX"),PlayerPrefs.GetFloat("PolY"), PlayerPrefs.GetFloat("PolZ"));
+        tr.position = new Vector3(PlayerPrefs.GetFloat("PolX"),PlayerPrefs.GetFloat("PolY"), PlayerPrefs.GetFloat("PolZ"));
        punktacja.wynik = PlayerPrefs.GetInt("Wynik");
        Zycie.zycie = PlayerPrefs.GetInt("ILZY");
         PlayerPrefs.GetString("NicK");
@@ -44,9 +46,9 @@ public class Save : MonoBehaviour
     public void Zapisz()
     {
         PlayerPrefs.SetInt("ZapisanaPlansza", scena);
-        PlayerPrefs.SetFloat("PolX", gameObject.transform.position.x);
-        PlayerPrefs.SetFloat("PolY", gameObject.transform.position.y);
-        PlayerPrefs.SetFloat("PolZ", gameObject.transform.position.z);
+        PlayerPrefs.SetFloat("PolX", tr.position.x);
+        PlayerPrefs.SetFloat("PolY", tr.position.y);
+        PlayerPrefs.SetFloat("PolZ", tr.position.z);
         PlayerPrefs.SetInt("Wynik", punktacja.wynik);
         PlayerPrefs.SetInt("ILZY", Zycie.zycie);
         PlayerPrefs.SetInt("MozKonWyg", 1);
