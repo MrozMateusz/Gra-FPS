@@ -385,8 +385,16 @@ public class MenedzerMenu : MonoBehaviour
 
     public void PomocMG()
     {
-        menuInGame.SetActive(false);
+        if (PlayerPrefs.HasKey("Skok"))
+        {
+            menuInGame.SetActive(false);
         helpMenu.SetActive(true);
+        }
+        else
+        {
+            helpERROR.SetActive(true);
+            menuInGame.SetActive(false);
+        }
     }
 
     public void Czysc()
@@ -474,7 +482,7 @@ public class MenedzerMenu : MonoBehaviour
         }
         else
         {
-            if (PlayerPrefs.GetInt("MozKon") == 1 && PlayerPrefs.GetInt("MozKonWyg") == 1)
+            if (PlayerPrefs.GetInt("MozKon") == 1 && PlayerPrefs.GetInt("MozKonWyg") == 1 && PlayerPrefs.GetInt("Zapisano") == 1 )
             {
                 btkon.interactable = true;
             }

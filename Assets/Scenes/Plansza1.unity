@@ -1335,6 +1335,7 @@ GameObject:
   - component: {fileID: 1624282535}
   - component: {fileID: 1624282534}
   - component: {fileID: 1624282533}
+  - component: {fileID: 1624282536}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -1404,6 +1405,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1624282536
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1624282532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1691535357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1996,6 +2010,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: tr
+      value: 
+      objectReference: {fileID: 1752011069}
     - target: {fileID: 1265831650219194709, guid: 4e440e9f294aba8429853125c1292568,
         type: 3}
       propertyPath: m_Name
@@ -2006,10 +2024,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: tr
-      value: 
-      objectReference: {fileID: 1752011069}
     - target: {fileID: 1265831649950621484, guid: 4e440e9f294aba8429853125c1292568,
         type: 3}
       propertyPath: m_Text
